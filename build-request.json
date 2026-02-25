@@ -1,0 +1,45 @@
+{
+  "kind": "build_request",
+  "title": "Add three-dot menu (⋮) to the left side of the app header",
+  "projectName": "Student Information System",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add a three-dot vertical ellipsis menu button (⋮) to the left side of the header in AppLayout. When clicked, it opens a dropdown menu with two options: 'Share Website' and 'Copy Link'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Version 6 Three-dot menu (⋮) on the left side of the header/heading build",
+          "In heading left side,share website with information"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A ⋮ (vertical ellipsis) icon button is visible on the left side of the app header in AppLayout.tsx",
+        "Clicking the ⋮ button opens a dropdown/popover menu",
+        "The dropdown contains a 'Share Website' option that triggers the browser's native Web Share API (navigator.share) with the app title, a brief description of the Student Information System, and the current page URL",
+        "If the Web Share API is not available, 'Share Website' falls back to copying the URL to the clipboard",
+        "The dropdown contains a 'Copy Link' option that copies the current page URL to the clipboard and shows a toast notification confirming the link was copied",
+        "The dropdown closes after an option is selected or when clicking outside of it"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files listed in frontend.immutablePaths",
+    "The ⋮ menu must be placed on the LEFT side of the header, not the right",
+    "Keep all existing header content and navigation intact"
+  ],
+  "nonGoals": [
+    "Adding social media sharing integrations (Twitter, Facebook, etc.)",
+    "Backend changes for this feature",
+    "Sharing individual student, course, or grade records",
+    "Implementing attendance or enrollment backend (separate future request)"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

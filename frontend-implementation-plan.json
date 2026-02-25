@@ -1,0 +1,26 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add three-dot menu (⋮) to the left side of the app header",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add a three-dot vertical ellipsis menu button (⋮) to the left side of the header in AppLayout with dropdown options for 'Share Website' and 'Copy Link'",
+      "acceptanceCriteria": [
+        "A ⋮ (vertical ellipsis) icon button is visible on the left side of the app header in AppLayout.tsx",
+        "Clicking the ⋮ button opens a dropdown/popover menu",
+        "The dropdown contains a 'Share Website' option that triggers the browser's native Web Share API (navigator.share) with the app title, a brief description of the Student Information System, and the current page URL",
+        "If the Web Share API is not available, 'Share Website' falls back to copying the URL to the clipboard",
+        "The dropdown contains a 'Copy Link' option that copies the current page URL to the clipboard and shows a toast notification confirming the link was copied",
+        "The dropdown closes after an option is selected or when clicking outside of it"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/AppLayout.tsx",
+          "operation": "modify",
+          "description": "Add a three-dot vertical ellipsis menu button (⋮) to the left side of the header within the existing header structure. Use the shadcn/ui DropdownMenu component (DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem) to create the dropdown with two options: 'Share Website' and 'Copy Link'. The 'Share Website' option should first attempt to use navigator.share() with the app title 'Student Information System', a brief description, and the current page URL; if Web Share API is unavailable, fall back to copying the URL to clipboard. The 'Copy Link' option should copy the current page URL to clipboard and show a toast notification using the existing toast system. Ensure the menu button is positioned on the left side of the header and that all existing header content remains intact. Verify the shadcn/ui DropdownMenu component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

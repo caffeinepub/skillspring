@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Student Information System (Version 6) with backend support for student profiles, course management, grade tracking, attendance tracking, and enrollment management. Features Internet Identity authentication and deployment to the Internet Computer. Currently adding a three-dot menu (⋮) on the left side of the header with 'Share Website' and 'Copy Link' options.",
+  "architectural_notes": [
+    "Backend in Motoko: student profiles, course management, grade tracking, attendance, enrollment",
+    "Frontend in React + TypeScript with Internet Identity authentication",
+    "Deployed to the Internet Computer"
+  ],
+  "known_issues": [
+    "Build has failed multiple times; retrying simplified requests has been required"
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-add-a-three-dot-vertical-ellipsis-menu-button-to-the-left-side-of-the-header-in-applayout-when-clicked-it-opens-a-dropdown-menu-with-two-options-share-website-and-copy-link",
+      "title": "Add a three-dot vertical ellipsis menu button (⋮) to the left side of the header in AppLayout. When clicked, it opens a dropdown menu with two options: 'Share Website' and 'Copy Link'.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Backend for attendance tracking (class sessions, present/absent per student)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Backend for enrollment system (linking students to courses)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Three-dot menu (⋮) on left side of header with 'Share Website' and 'Copy Link' options",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Student Information System",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

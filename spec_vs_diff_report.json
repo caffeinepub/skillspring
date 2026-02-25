@@ -1,0 +1,14 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T14:55:23.438Z",
+  "summary": "The diff implements a three-dot vertical ellipsis menu (⋮) on the left side of the app header in AppLayout.tsx with 'Share Website' and 'Copy Link' options. All acceptance criteria for REQ-1 appear to be satisfied: the ⋮ button is placed on the left side of the header, clicking it opens a DropdownMenu, 'Share Website' uses navigator.share with title/description/URL and falls back to clipboard copy, 'Copy Link' copies the URL and shows a toast notification, and the DropdownMenu closes after selection or outside click (standard behavior of the component). No missing requirements or hallucinated features were identified.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.95,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/layout/AppLayout.tsx",
+    "project_state.json"
+  ]
+}
